@@ -63,11 +63,10 @@ app.delete('/delete-post/:timestamp', function(request, response) {
         } else {
             var posts = JSON.parse(data);
             
-            var remainingPosts = posts.blogposts.filter(function(p) {
+            posts.blogposts = posts.blogposts.filter(function(p) {
                 return p.timestamp != ts;
             });
             
-            posts.blogposts = remainingPosts;
             var updatedData = JSON.stringify(posts);
             
             fs.writeFile(__dirname + '/data/posts.json', updatedData, function(error) {
