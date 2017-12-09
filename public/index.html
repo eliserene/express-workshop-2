@@ -21,6 +21,20 @@
         <form action="/create-post" method="POST">
           <textarea name="blogpost" rows="5" placeholder="Write something cool, insightful, or funny here."></textarea>
           <!-- 3. mood selector -->
+           <div class="mood-select">I'm feeling:
+           <select name="mood">
+             <option value="0">None</option>
+             <option value="1">😃 Happy</option>
+             <option value="2">😛 Joking</option>
+             <option value="3">😢 Sad</option>
+             <option value="4">😔 Regretful</option>
+             <option value="5">😡 Angry</option>
+             <option value="6">😲 Suprised</option>
+             <option value="7">😎 Smug</option>
+             <option value="8">👑 Triumphant</option>
+             <option value="9">😍 In love</option>
+           </select>
+         </div>
           <button type="submit">Post</button>
         </form>
         <div class="clearfix"></div>

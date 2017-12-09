@@ -212,3 +212,31 @@ div.postBody {
 /* 1. delete button styles */
 
  /* 1. mood indicator */
+ @font-face {
+   font-family: 'NotoColorEmoji';
+   src: url('NotoColorEmoji.ttf');
+   text-decoration: none;
+   font-style: normal;
+ }
+
+ div.mood {
+  margin: 5px;
+  font-size: 18px;
+ }
+
+ div.mood .emoji {
+  font-family: 'NotoColorEmoji';
+  font-size: 30px;
+ }
+
+ div.mood-select {
+  margin: 25px 15px;
+  font-size: 20px;
+  display: inline-block;
+ }
+
+ @media screen and (max-width: 600px) {
+   div.mood-select {
+     margin: 15px 20px 0px 20px;
+   }
+ }

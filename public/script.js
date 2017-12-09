@@ -81,6 +81,23 @@ function addBlogPostToPage (post) {
 
    // 2. insert mood display here
    
+   var moodNames = [
+   '',
+   '<span class="emoji">😃</span> Happy',
+   '<span class="emoji">😛</span> Joking',
+   '<span class="emoji">😢</span> Sad',
+   '<span class="emoji">😔</span> Regretful',
+   '<span class="emoji">😡</span> Angry',
+   '<span class="emoji">😲</span> Suprised',
+   '<span class="emoji">😎</span> Smug',
+   '<span class="emoji">👑</span> Triumphant',
+   '<span class="emoji">😍</span> In love'
+ ];
+ var moodDiv = document.createElement('div');
+ moodDiv.className = 'mood';
+ moodDiv.innerHTML = moodNames[post.mood];
+ postText.append(moodDiv);
+   
   postDiv.appendChild(postText);
   postDiv.appendChild(postDetail);
   postContainer.prepend(postDiv);
