@@ -95,7 +95,7 @@ function addBlogPostToPage (post) {
  ];
  var moodDiv = document.createElement('div');
  moodDiv.className = 'mood';
- moodDiv.innerHTML = moodNames[post.mood];
+ moodDiv.innerHTML = moodNames[post.mood] || moodNames[0];
  postText.append(moodDiv);
    
   postDiv.appendChild(postText);
